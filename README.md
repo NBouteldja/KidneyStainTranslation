@@ -1,5 +1,6 @@
 # KidneyStainTranslation
-This repo provides a framework to train CycleGAN- and U-GAT-IT-based translators for unsupervised stain-to-stain translation in histology.
+This repo provides a framework to train CycleGAN- and U-GAT-IT-based translators for unsupervised stain-to-stain translation in histology. It builds upon the CycleGAN repository from https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix. <br>
+An exemplary translation from the aSMA to PAS stain in kidney tissue is provided: 
 <br>
 | Input aSMA image | Fake PAS translation |
 |:--:|:--:|
