@@ -1,5 +1,11 @@
 # KidneyStainTranslation
 This repo provides a framework to train CycleGAN- and U-GAT-IT-based translators for unsupervised stain-to-stain translation in histology.
+<br>
+| Input aSMA image | Fake PAS translation |
+|:--:|:--:|
+| <img src="https://github.com/NBouteldja/KidneyStainTranslation/blob/master/exemplaryResults/aSMA_image.png?raw=true" width="400">| <img src="https://github.com/NBouteldja/KidneyStainTranslation/blob/master/exemplaryResults/fakePAS_translation.png?raw=true" width="324"> |
+| Prediction | Ground-truth |
+| <img src="https://github.com/NBouteldja/KidneyStainTranslation/blob/master/exemplaryResults/prediction.png?raw=true" width="400">| <img src="https://github.com/NBouteldja/KidneyStainTranslation/blob/master/exemplaryResults/groundtruth.png?raw=true" width="324"> |
 
 # Training
 To train a CycleGAN translator (e.g. incorporating a prior segmentation model), use the following command:
