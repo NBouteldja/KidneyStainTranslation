@@ -45,7 +45,7 @@ class CycleGANModel(BaseModel):
         if is_train:
             parser.add_argument('--lambda_A', type=float, default=1.0, help='weight for cycle loss (A -> B -> A)')
             parser.add_argument('--lambda_B', type=float, default=1.0, help='weight for cycle loss (B -> A -> B)')
-            parser.add_argument('--lambda_Seg', type=float, default=.5, help='weight for cycle loss (Seg(A), A -> B -> A, Seg(A))')
+            parser.add_argument('--lambda_Seg', type=float, default=1.0, help='weight for cycle loss (Seg(A), A -> B -> A, Seg(A))')
             parser.add_argument('--lambda_id', type=float, default=1.0, help='use identity mapping. Setting lambda_identity other than 0 has an effect of scaling the weight of the identity mapping loss. For example, if the weight of the identity loss should be 10 times smaller than the weight of the reconstruction loss, please set lambda_identity = 0.1')
 
         return parser
