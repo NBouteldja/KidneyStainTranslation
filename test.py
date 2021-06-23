@@ -45,7 +45,7 @@ logger = log.getLogger()
 logger.info('Script call arguments are:\n\n' + ' '.join(sys.argv[1:]) + '\n\n')
 
 segModel = Custom(input_ch=3, output_ch=8, modelDim=2)
-segModel.load_state_dict(torch.load('/homeStor1/nbouteldja/Results_ActivePAS/custom_train_val_test_e500_b6_r0.001_w1e-05_516_640_32_RAdam_instance_1deeper_Healthy_UUO_Adenine_Alport_IRI_NTN_fewSpecies_fewHuman_Background_+-1range_X/Model/finalModel.pt', map_location=lambda storage, loc: storage))
+segModel.load_state_dict(torch.load('<path-to-segmentation-model.pt>', map_location=lambda storage, loc: storage))
 segModel.eval()
 segModel = segModel.to(device)
 
