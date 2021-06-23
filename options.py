@@ -41,7 +41,7 @@ class Options:
         parser.add_argument('--init_gain', type=float, default=0.02, help='scaling factor for normal, xavier and orthogonal.')
         parser.add_argument('--no_dropout', action='store_true', help='no dropout for the generator')
         parser.add_argument('--use_segm_model', action='store_true',help='use pretrained segmentation model')
-        parser.add_argument('--segm_model_path', type=str, default ='/homeStor1/nbouteldja/Results_ActivePAS/custom_train_val_test_e500_b6_r0.001_w1e-05_516_640_32_RAdam_instance_1deeper_Healthy_UUO_Adenine_Alport_IRI_NTN_fewSpecies_fewHuman_Background_+-1range_X/Model/finalModel.pt', help='path to the segmentation model for domain B' )
+        parser.add_argument('--segm_model_path', type=str, default ='<path-to-model.pt', help='path to the segmentation model for domain B' )
         parser.add_argument('--use_MC', action='store_true',help='use multi channel inputs')
         # training parameters
         parser.add_argument('--niters', type=int, default=20000, help='# of iterations at starting learning rate')
