@@ -96,11 +96,11 @@ def extractInstanceChannels(postprocessedPredInstance, postprocessedGTInstance, 
 
     tubuliInstanceChannel = postprocessedPredInstance.copy()
     tubuliInstanceChannel[tubuliInstanceChannel < tubuliInstanceID_StartsWith] = 0
-    tubuliInstanceChannel -= (tubuliInstanceID_StartsWith-1)
+    tubuliInstanceChannel[tubuliInstanceChannel>0] -= (tubuliInstanceID_StartsWith-1)
 
     tubuliInstanceChannelGT = postprocessedGTInstance.copy()
     tubuliInstanceChannelGT[tubuliInstanceChannelGT < tubuliInstanceID_StartsWith] = 0
-    tubuliInstanceChannelGT -= (tubuliInstanceID_StartsWith-1)
+    tubuliInstanceChannelGT[tubuliInstanceChannelGT>0] -= (tubuliInstanceID_StartsWith-1)
 
     return [tubuliInstanceChannel, labeledGlom, labeledTuft, labeledVeins, labeledArtery, labeledArteryLumen], [tubuliInstanceChannelGT, labeledGlomGT, labeledTuftGT, labeledVeinsGT, labeledArteryGT, labeledArteryLumenGT]
 
